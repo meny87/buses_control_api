@@ -40,7 +40,7 @@ app.post('/cuotas', (req, res) => {
 
   var cuota = new Cuota({
     unidad: req_body.unidad,
-    periodo: req_body.cantidad,
+    cantidad: req_body.cantidad,
     periodo: req_body.periodo,
     conductor: req_body.conductor,
     usuario: req_body.usuario,
