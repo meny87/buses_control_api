@@ -40,6 +40,7 @@ app.post('/cuotas', (req, res) => {
 
   var cuota = new Cuota({
     unidad: req_body.unidad,
+    periodo: req_body.cantidad,
     periodo: req_body.periodo,
     conductor: req_body.conductor,
     usuario: req_body.usuario,
@@ -70,6 +71,7 @@ app.post('/penalizaciones', (req, res) => {
   var penalizacion = new Penalizacion({
     unidad: req_body.unidad,
     motivo: req_body.motivo,
+    cantidad: req_body.cantidad,
     conductor: req_body.conductor,
     usuario: req_body.usuario
   });

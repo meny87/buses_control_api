@@ -5,6 +5,10 @@ var CuotaSchema = new mongoose.Schema({
     type: Number,
     required: true
   },
+  cantidad: {
+    type: Number,
+    required: true
+  },
   periodo: {
     type: String,
     required: true

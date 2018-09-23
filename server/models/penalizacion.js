@@ -9,6 +9,10 @@ var PenalizacionSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  cantidad: {
+    type: Number,
+    required: true
+  },
   conductor: {
     type: String,
     required: true
