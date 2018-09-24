@@ -64,6 +64,23 @@ app.get('/penalizaciones', (req, res) => {
   })
 });
 
+app.get('/cuotas/:unidad/:periodo', (req, res) => {
+  var unidad = req.params.unidad;
+  var periodo = req.params.periodo;
+
+  Cuota.findOne({unidad, periodo}).then((cuota) => {
+    if (!cuota) {
+      return res.status(404).send();
+    }
+
+    res.send({
+      cuota
+    });
+  }).catch((e) => {
+    res.status(400).send();
+  });
+});
+
 app.post('/penalizaciones', (req, res) => {
   var req_body = req.body;
   //res.status(200).send(req.body);
