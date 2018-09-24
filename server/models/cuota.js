@@ -26,8 +26,7 @@ var CuotaSchema = new mongoose.Schema({
     required: true
   },
   comentarios: {
-    type: String,
-    required: true
+    type: String
   }
 });
 
