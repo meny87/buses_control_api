@@ -30,7 +30,7 @@ var CuotaSchema = new mongoose.Schema({
   }
 });
 
-CuotaSchema.index({unidad:1, periodo:1}, {unique: true});
+CuotaSchema.index({unidad:1, periodo:1});
 
 var Cuota = mongoose.model('Cuota', CuotaSchema);
 module.exports = {Cuota};
