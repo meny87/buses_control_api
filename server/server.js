@@ -50,8 +50,10 @@ app.post('/cuotas', (req, res) => {
   cuota.save().then((doc) => {
     res.send(doc);
   }, (e) => {
+    e.status='error';
     res.status(400).send(e);
   });
+
 });
 
 app.get('/penalizaciones', (req, res) => {
